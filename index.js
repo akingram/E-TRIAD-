@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 // Log all incoming requests
 
 
-mongoose.connect(process.env.MONGODB_URL).then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
   console.log("MongoDB connected");
 }).catch((err) => {
   console.log(err);
