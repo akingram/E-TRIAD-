@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 // Log all incoming requests
 
 
-mongoose.connect(process.env.MONGODB_URI).then(() => {
+mongoose.connect(process.env.MONGODB_URL).then(() => {
   console.log("MongoDB connected");
 }).catch((err) => {
   console.log(err);
@@ -29,6 +29,8 @@ app.use("/api/v1/auth", authRouter);
 // Catch-all route for debugging
 
 // Error handling middleware
+
+
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
