@@ -73,13 +73,13 @@ const productSchema = new Schema({
   containerType: {
     type: String,
     required: [true, 'Container type is required'],
-    enum: ['Glass Bottle', 'Plastic Container', 'Blister Pack', 'Jar', 'Pouch'],
+    enum: ['Glass Bottle', 'Plastic Container', ' Pack', 'Jar', 'Pouch'],
     default: 'Plastic Container',
   },
   productForm: {
     type: String,
     required: [true, 'Product form is required'],
-    enum: ['Softgel', 'Capsule', 'Tablet', 'Powder', 'Liquid'],
+    enum: ['hardware', 'software', 'service', 'solutions', 'firmware'],
     default: 'Capsule',
   },
 }, {
